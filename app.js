@@ -66,6 +66,8 @@ const cardsWon = []
 
 function createBoard () 
 {
+    resultDisplay.textContent = 'Score: 0' 
+
     for (let i = 0; i < cardArray.length; i++)
     {
         const card = document.createElement('img')
@@ -86,11 +88,11 @@ function checkMatch() {
     {
         cards[optionOneId].setAttribute('src', 'images/warpstar.png')
         cards[optionTwoId].setAttribute('src', 'images/warpstar.png')
-        messageDisplay.textContent = 'You have clicked the same image!'
+        messageDisplay.textContent = 'You have clicked the same image... ˚‧º·(˃̣̣̥⌓˂̣̣̥)‧º·˚'
     }
 
     else if (cardsChosen[0] == cardsChosen[1]) {
-        messageDisplay.textContent = 'You found a match!'
+        messageDisplay.textContent = 'You found a match! ᕙ( ͡° ͜ʖ ͡°)ᕗ'
         cards[optionOneId].setAttribute('src', 'images/blank.jpeg')
         cards[optionTwoId].setAttribute('src', 'images/blank.jpeg')
 
@@ -106,22 +108,22 @@ function checkMatch() {
     {
         cards[optionOneId].setAttribute('src', 'images/warpstar.png')
         cards[optionTwoId].setAttribute('src', 'images/warpstar.png')
-        messageDisplay.textContent = 'Sorry, try again!'
+        messageDisplay.textContent = 'Uh oh, wrong move! (╯°□°）╯'
     }
 
-    resultDisplay.textContent = cardsWon.length
+    resultDisplay.textContent = 'Score: ' + cardsWon.length
 
     cardsChosen = []
     cardsChosenIds = []
 
     if (cardsWon.length == cardArray.length / 2)
     {
-        resultDisplay.textContent = 'Congratulations you found them all!'
+        resultDisplay.textContent = 'Congratulations! You did it! (✿◠‿◠)'
+        messageDisplay.textContent = ' '
     }
 }
 
 function flipCard() {
-
     messageDisplay.textContent = ' '
 
     // Lets us know which card we clicked on 
