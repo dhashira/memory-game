@@ -35,6 +35,47 @@ h1 {
     color: #F69EBC; 
 }
 
+#left-deco {
+    font-family: ubuntu; 
+    font-size: 50px; 
+    color: #F69EBC; 
+    position: relative; 
+    top: -125px; 
+    left: 125px; 
+
+    /* Refers to @keyframe */ 
+    animation-name: floating1; 
+
+    /* Refers to the secs your animation will take from start to finish */
+    animation-duration: 3s; 
+
+    /* The number of loops before stopping */
+    animation-iteration-count: infinite; 
+
+    animation-timing-function: ease-in-out; 
+}
+
+#right-deco {
+    font-family: ubuntu; 
+    font-size: 50px; 
+    color: #F69EBC;
+    position: relative; 
+    top: -250px; 
+    left: 940px; 
+
+    /* Refers to @keyframe */ 
+    animation-name: floating2; 
+
+    /* Refers to the secs your animation will take from start to finish */
+    animation-duration: 3s; 
+
+    /* The number of loops before stopping */
+    animation-iteration-count: infinite; 
+    
+    animation-timing-function: ease-in-out; 
+}
+
+
 button {
     font-family: ubuntu; 
     font-size: 40px; 
@@ -44,7 +85,7 @@ button {
     border: 4px solid #F69EBC;
     position: fixed; 
     top: 450px; 
-    left: 875px; 
+    left: 950px; 
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -53,4 +94,16 @@ button:hover {
     background-color: white;
     color: #F69EBC;
     box-shadow: 0 12px 16px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+@keyframes floating1 {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); } 
+    to   { transform: translate(0, -0px); }    
+}
+
+@keyframes floating2 {
+    from { transform: translate(0,  10px); }
+    50%  { transform: translate(0, 0px); } 
+    to   { transform: translate(0, 10px); }    
 }

@@ -50,12 +50,25 @@ const cardArray = [
     }
 ]
 
+// Randomizes the cards each time 
 cardArray.sort(() => 0.5 - Math.random())
 
-// Looking for id of grid throughout whole document
+// Looks for id of grid throughout whole document
 const gridDisplay = document.querySelector('#grid')
+
+// Looks for id of result throughout whole document 
 const resultDisplay = document.querySelector('#result')
+
+// Looks for id of message throughout whole document 
 const messageDisplay = document.querySelector('#message')
+
+const restartButton = document.querySelector('#restart-btn')
+restartButton.addEventListener('click', resetGame)
+
+function resetGame() {
+    window.location.reload(); 
+    return false; 
+}
 
 // Pushing items into this array 
 let cardsChosen = []
