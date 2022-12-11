@@ -63,10 +63,14 @@ const resultDisplay = document.querySelector('#result')
 const messageDisplay = document.querySelector('#message')
 
 const restartButton = document.querySelector('#restart-btn')
+
+const audio = new Audio("poyo.m4a")
+
 restartButton.addEventListener('click', resetGame)
 
 function resetGame() {
     window.location.reload(); 
+    audio.play(); 
     return false; 
 }
 
